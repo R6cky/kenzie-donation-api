@@ -36,6 +36,12 @@
       "nome": "pedro3",
       "age": "32",
       "id": 6
+    },
+    {
+      "email": "camila1@mail.com",
+      "password": "$2a$10$gkdBZZO7kNWCDFc9doO.OulbV2oSlURO0s7Xsg6.AS4m2vSEcviWm",
+      "age": "32",
+      "id": 7
     }
   ],
   "posts": [
