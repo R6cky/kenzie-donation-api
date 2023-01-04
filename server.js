@@ -21,6 +21,6 @@ app.use(auth);
 app.use(router);
 app.listen(port);
 
-console.log("Yess! This Server is running on port:", port);
+console.log("Yess! The Server of Kenzie Donation is running on port:", port);
 
 /* A senha do Kenzinho é 123456 */
