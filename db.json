@@ -1,49 +1,5 @@
 {
-  "users": [
-    {
-      "email": "kenzinho@mail.com",
-      "password": "$2a$10$YQiiz0ANVwIgpOjYXPxc0O9H2XeX3m8OoY1xk7OGgxTnOJnsZU7FO",
-      "name": "Kenzinho",
-      "age": 38,
-      "id": 1
-    },
-    {
-      "email": "cleiton@mail.com",
-      "password": "$2a$10$xbm.nqXDJ4Nm6F4Ta3b2fuVNcSiEx.ZXLb/TyWwMB4Fi19K2sUG06",
-      "id": 2
-    },
-    {
-      "email": "olivier@mail.com",
-      "password": "$2a$10$hl1mMWvhZtJkeYMHVCr8put/Z0lgT/taHiaE329D8Js0W.oto3R46",
-      "firstname": "Olivier",
-      "lastname": "Monge",
-      "age": 32,
-      "id": 3
-    },
-    {
-      "email": "pedro@mail.com",
-      "password": "$2a$10$KIesF0Uzq62jWHjO9bJN1eVdnWzx9fgis1CtoZYx3pbUsectDFQGy",
-      "id": 4
-    },
-    {
-      "email": "pedro2@mail.com",
-      "password": "$2a$10$7b1zp/kkT2YpkrACcEbO..N.7tr4iQkDe24Q42wP.KNAonqYqzhQa",
-      "id": 5
-    },
-    {
-      "email": "pedro3@mail.com",
-      "password": "$2a$10$VKb9VsEw/HG7qb0PbD2zHedGUgbbNb8kYlvM6AxEiIwAfsZQgPQ2W",
-      "nome": "pedro3",
-      "age": "32",
-      "id": 6
-    },
-    {
-      "email": "camila1@mail.com",
-      "password": "$2a$10$gkdBZZO7kNWCDFc9doO.OulbV2oSlURO0s7Xsg6.AS4m2vSEcviWm",
-      "age": "32",
-      "id": 7
-    }
-  ],
+  "users": [],
   "posts": [],
   "donation": [],
   "request": []
