@@ -1,24 +1,330 @@
-# json-server-base
+# API da Kenzie Donation
 
-Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada no desenvolvimento das API's nos Projetos Front-end.
+A API da **KenzieDonation** tem como objetivo permitir cadastro e login de usuários, e que estes possam inserir itens à serem doados ou solicitados. Pode-se, também, editar o item criado ou apaga-lo. Todas as itens podem ser lidas sem autenticação, mas sua criação, edição ou apagar precisam de token de autorização.
 
-## Endpoints
+## Rotas
+baseUrl: https://kenzie-donation-api.onrender.com/
 
-Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
+## Registro
+Para fazer o registro:
+**Endpoint:** POST https://kenzie-donation-api.onrender.com/register
 
-### Cadastro
+*exemplo de body*
+```
+{
+  "name": "Kenzinho",
+  "email": "xanadu@mail.com",
+  "password": "123456",
+  "avatar": "",
+  "phone": "11234567890",
+  "state": "Goias"
+}
+```
+*exemplo de resposta* 
+```
+{
+	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjU1NiwiZXhwIjoxNjczMDA2MTU2LCJzdWIiOiIzIn0.qfT2uD4SOO4y59JWJd-exHfTBB9mhDGmJku5q91ZhyM",
+	"user": {
+		"email": "xanadu@mail.com",
+		"name": "Kenzinho",
+		"avatar": "",
+		"phone": "11234567890",
+		"state": "Goias",
+		"id": 3
+	}
+}
+```
 
-POST /register <br/>
-POST /signup <br/>
-POST /users
+## Login
 
-Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password.
-Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
+Para fazer o login:
+**Endpoint:** POST https://kenzie-donation-api.onrender.com/login
 
+*exemplo de body*
+```
+{
+	"email": "xanadu@mail.com",
+	"password": "123456"
+}
+```
+*exemplo de resposta* 
+```
+{
+	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4",
+	"user": {
+		"email": "xanadu@mail.com",
+		"name": "Kenzinho",
+		"avatar": "",
+		"phone": "11234567890",
+		"state": "Goias",
+		"id": 3
+	}
+}
+```
 
-### Login
+*Tanto login como registro retornam token de validação*
+## RESQUEST / SOLICITAÇÃO
 
-POST /login <br/>
-POST /signin
+### Criar solicitação
 
-Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+Para adicionar uma solicitação, o usuário precisa estar autenticado;
+Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
+
+**Endpoint:** POST https://kenzie-donation-api.onrender.com/request
+
+*exemplo de body*
+```
+{
+	"title": "Preciso de um computador para trabalhar",
+	"description": "Sou dev, mas estou desempregado",
+	"img": "",
+	"type": "solicitacao",
+	"category": "Eletro",
+	"userId": 3
+}
+```
+*exemplo de resposta* 
+201 - created
+```
+{
+	"title": "Preciso de um computador para trabalhar",
+	"description": "Sou dev, mas estou desempregado",
+	"img": "",
+	"type": "solicitacao",
+	"category": "Eletro",
+	"userId": 3,
+	"id": 2
+}
+```
+
+### Consultar solicitações (não precisa de autenticação - todos podem ver) 
+
+Para consultar as solicitações:
+**Endpoint:** GET https://kenzie-donation-api.onrender.com/request
+
+*exemplo de body*
+```
+VAZIO
+```
+
+*exemplo de resposta* 
+
+```
+[
+	{
+		"title": "Preciso de um computador para trabalhar",
+		"description": "Sou dev, mas estou desempregado",
+		"img": "",
+		"type": "solicitacao",
+		"category": "Eletro",
+		"userId": 3,
+		"id": 2
+	}
+]
+```
+
+Para expandir o userId da resposta, e saber quem está por trás do id, insira "?_expand=user" ao fim do endpoint https://kenzie-donation-api.onrender.com/request?_expand=user
+
+### Editar solicitação 
+
+Para editar uma solicitação, o usuário precisa estar autenticado;
+Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
+
+**__É obrigatório informar o userId no body da requisição__**
+
+**Endpoint:** PATCH https://kenzie-donation-api.onrender.com/request/{idDoRequest}
+
+*exemplo de body*
+```
+{
+		"title": "Preciso de um computador para trabalhar",
+		"description": "Estou empregado, mas sem computador",
+		"img": "",
+		"type": "solicitacao",
+		"category": "Eletro",
+		"userId": 3
+}
+```
+*exemplo de resposta* 
+200 - OK
+```
+{
+	"title": "Preciso de um computador para trabalhar",
+	"description": "Estou empregado, mas sem computador",
+	"img": "",
+	"type": "solicitacao",
+	"category": "Eletro",
+	"userId": 3,
+	"id": 2
+}
+```
+
+### Deletar uma solicitação 
+
+Para deletar uma solicitação o usuário precisa estar autenticado;
+
+Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
+
+**Endpoint:** DELETE https://kenzie-donation-api.onrender.com/request/{idDoRequest}
+
+*exemplo de body*
+```
+VAZIO
+```
+*exemplo de resposta* 
+200 - OK
+```
+{}
+```
+
+## Posts
+
+### Criar um Post 
+
+Para adicionar um Post, o usuário precisa estar autenticado;
+
+Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
+
+**Endpoint:** POST https://kenzie-donation-api.onrender.com/posts
+
+*exemplo de body*
+```
+{
+	"title": "Estou doando um computador 4gb de ram",
+	"description": "está funcional",
+	"img": "",
+	"type": "donation",
+	"category": "Eletro",
+	"userId": 3
+}
+```
+*exemplo de resposta* 
+201 - created
+```
+{
+	"title": "Estou doando um computador 4gb de ram",
+	"description": "está funcional",
+	"img": "",
+	"type": "donation",
+	"category": "Eletro",
+	"userId": 3,
+	"id": 2
+}
+```
+
+### Consultar Posts (não precisa de autenticação - todos podem ver) 
+
+Para consultar os post:
+**Endpoint:** GET https://kenzie-donation-api.onrender.com/posts
+
+*exemplo de body*
+```
+VAZIO
+```
+
+*exemplo de resposta* 
+
+```
+[
+	{
+		"title": "Estou doando um computador 4gb de ram",
+	  "description": "está funcional",
+		"img": "",
+		"type": "donation",
+		"category": "Eletro",
+		"userId": 3,
+		"id": 2
+	}
+]
+```
+
+### Editar Post 
+
+Para editar um post, o usuário precisa estar autenticado;
+Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
+
+**__É obrigatório informar o userId no body da requisição__**
+
+**Endpoint:** PATCH https://kenzie-donation-api.onrender.com/posts/{idDoPost}
+
+*exemplo de body*
+```
+{
+		"title": "Estou doando um computador 4gb de ram",
+	  "description": "está funcional",
+		"img": "",
+		"type": "donation",
+		"category": "Eletro",
+		"userId": 3
+}
+```
+*exemplo de resposta* 
+200 - OK
+```
+{
+	"title": "Estou doando um computador 4gb de ram",
+	"description": "está funcional",
+	"img": "",
+	"type": "donation",
+	"category": "Eletro",
+	"userId": 3,
+	"id": 2
+}
+```
+
+### Deletar um post 
+
+Para deletar um post o usuário precisa estar autenticado;
+
+Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
+
+**Endpoint:** DELETE https://kenzie-donation-api.onrender.com/posts/{idDoPost}
+
+*exemplo de body*
+```
+VAZIO
+```
+*exemplo de resposta* 
+200 - OK
+```
+{}
+```
+
+## Ver usuário
+
+**__ Necessário estar logado e autenticado __**
+
+**Endpoint:** https://kenzie-donation-api.onrender.com/users/{idDoUser}?_embed=objects
+
+Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
+
+*exemplo de body*
+```
+VAZIO
+```
+
+*exemplo de resposta* 
+200 - OK
+```
+{
+	"email": "xanadu@mail.com",
+	"password": "$2a$10$oju9246LRG.lXOm2B/iCiOLzpNpZCpd6HW3Ne3BJO9n6QwA6ndNGm",
+	"name": "Kenzinho",
+	"avatar": "",
+	"phone": "11234567890",
+	"state": "Goias",
+	"id": 3,
+	"objects": []
+}
+```
+
+*Exemplo de resposta ao tentar acessar um usuário que não corresponde ao logado*
+
+tentativa com id = 2 
+(https://kenzie-donation-api.onrender.com/users/2?_embed=objects)
+```
+{
+"Private resource access: entity must have a reference to the owner id"
+}
+```
+
