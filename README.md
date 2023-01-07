@@ -290,11 +290,13 @@ VAZIO
 {}
 ```
 
-## Ver usuário
+## Usuário
+
+### Ver usuário
 
 **__ Necessário estar logado e autenticado __**
 
-**Endpoint:** https://kenzie-donation-api.onrender.com/users/{idDoUser}?_embed=objects
+**Endpoint:** GET https://kenzie-donation-api.onrender.com/users/{idDoUser}?_embed=objects
 
 Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
 
@@ -328,3 +330,36 @@ tentativa com id = 2
 }
 ```
 
+### Editar usuário
+
+Na edição de um usuário já criado, **só é permitido alterar os campos *"name", "avatar", "phone", "state"***
+
+**É necessário indicar o id do usuário no endpoint e estar autenticado**
+
+**Endpoint:** PATCH https://kenzie-donation-api.onrender.com/users/{idDoUser}
+
+Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
+
+*exemplo de body*
+```
+{
+	"name": "José da Silva", //alterando o nome do usuário
+	"avatar": "",
+	"phone": "11234567890",
+	"state": "Goias"
+}
+```
+
+*exemplo de resposta* 
+200 - OK
+```
+{
+	"email": "xanadu@mail.com",
+	"password": "$2a$10$oju9246LRG.lXOm2B/iCiOLzpNpZCpd6HW3Ne3BJO9n6QwA6ndNGm",
+	"name": "José da Silva",
+	"avatar": "",
+	"phone": "11234567890",
+	"state": "Goias",
+	"id": 3
+}
+```
