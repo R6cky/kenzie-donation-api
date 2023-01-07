@@ -1,6 +1,74 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "helo@mail.com",
+      "password": "$2a$10$r1yajeJOq/T0VTuD81YWZuZfzvYNF0.fKymtFzlvUro5W1ypqmeae",
+      "id": 1
+    }
+  ],
   "posts": [],
-  "donation": [],
-  "request": []
+  "donation": [
+    {
+      "title": "Computador ",
+      "description": "Funciona perfeitamente",
+      "category": "eletronico",
+      "type": "donation",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_890480-MLB44056384228_112020-O.webp",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "title": "Cama de casal",
+      "description": "Em bom estado ",
+      "category": "Moveis",
+      "type": "Fazer doacao",
+      "image": "https://www.tulamoveis.com.br/5831-thickbox_default/cama-casal-madeira-140m-paris.jpg",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "title": "Carrinho de bebê",
+      "description": "Com um detahle na rodinha",
+      "category": "Roupas",
+      "type": "Fazer doacao",
+      "image": "https://a-static.mlcdn.com.br/800x560/carrinho-de-bebe-com-bebe-conforto-cosco-travel-system-reverse-0-a-15kg/magazineluiza/231156500/21c94d311b1c8caa9688177c0c036282.jpg",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "title": "Doa-se uma calça jeans feminina",
+      "description": "Muito boa e confortável",
+      "category": "Roupas",
+      "type": "Fazer doacao",
+      "image": "https://d1ug6lpn0d6ze6.cloudfront.net/Custom/Content/Products/19/30/1930863_calca-le-lis-blanc-paula-capri-cebu-feminina-18-09-3431_z18_637550537329023423.jpg",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "title": "Doa-se uma calça jeans feminina",
+      "description": "Muito boa e confortável",
+      "category": "Roupas",
+      "type": "Fazer doacao",
+      "image": "https://d1ug6lpn0d6ze6.cloudfront.net/Custom/Content/Products/19/30/1930863_calca-le-lis-blanc-paula-capri-cebu-feminina-18-09-3431_z18_637550537329023423.jpg",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "title": "Televisão 14\"",
+      "description": "Funionando",
+      "category": "Eletro",
+      "type": "Fazer doacao",
+      "image": "data:image/jpeg;base64,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",
+      "userId": 1,
+      "id": 6
+    }
+  ],
+  "request": [
+    {
+      "title": "Preciso urgente de um PC",
+      "content": "Necessário estar funcionando",
+      "userId": 1,
+      "id": 1
+    }
+  ]
 }
