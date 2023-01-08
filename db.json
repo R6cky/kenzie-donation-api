@@ -178,10 +178,27 @@
       "image": "https://cdn.verbolia.com/api/images/H4sIAAAAAAAEAGXOTQrCMBAF4KuUrCXpj9a2OzdFF66quE7TmETTpCRTKYiH8SxezHQjisNs5vH4mDs6Oo0qJAEGXxGieoGtnjCzPW5dOKngnpRF2DjN82WaZMWqjGN8GQRaoJpq3VJ2!UU8UFDs22Ed0cqDMoIYC7UdTYcHMwt7Oql+7LdcCQmoStbxJzupDiSq0ixEGw3cGQr8wKdQQ409v57RjWtpo78J7G5+vAHHgQUie7wBZMh6SegAAAA=/sofa-velho.jpg",
       "userId": 1,
       "id": 19
+    },
+    {
+      "title": "Luva goleiro",
+      "description": "Utilizada poucas vezes",
+      "category": "Roupas",
+      "type": "donation",
+      "image": "https://photos.enjoei.com.br/luva-de-goleiro-kipsta-f500-80694782/1200xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy8yMDU1OTQ4MC82ODNmODQ5YTgyZWE1YzVkYjVmMjMzODdiNDA0OWNkZC5qcGc",
+      "userId": 1,
+      "id": 20
+    },
+    {
+      "title": "Óculos de sol Chili Beans",
+      "description": "Comprei um novo, estou doando este. ",
+      "category": "Roupas",
+      "type": "donation",
+      "image": "https://photos.enjoei.com.br/oculos-chilli-beans-78629294/828xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy8yOTA0ODU2Ni80YzVmNDc0YWQzYzlkZWExMWY1MTRhZTVmNDhmZTE2MC5qcGc",
+      "userId": 1,
+      "id": 21
     }
   ],
   "request": [
-
     {
       "title": "Moleton ",
       "description": "preciso urgente",
@@ -262,6 +279,24 @@
       "image": "https://photos.enjoei.com.br/belissimo-e-confortavel-sofa-antigo-para-tres-lugares-com-estrutura-executada-em-madeira-macica-com-almofadas-soltas-e-revestimento-em-autentico-tecido-shantung-de-seda-adamascada/1200xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy81NDAzNTM3LzAxMTE3MjgzOGJlOWJhMGM2YjY4YjZiOTA3ZTEwNDBkLmpwZw",
       "userId": 1,
       "id": 18
+    },
+    {
+      "title": "Cobertor",
+      "description": "Precisa-se de cobertor, é para uma ação social. ",
+      "category": "Roupas",
+      "type": "request",
+      "image": "data:image/jpeg;base64,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",
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "title": "Óculos de sol Rayban",
+      "description": "Galera, quem tiver um óculos desse para doar, ficarei grato!",
+      "category": "Roupas",
+      "type": "request",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_609709-MLB50493942120_062022-W.jpg",
+      "userId": 1,
+      "id": 20
     }
   ]
 }
