@@ -61,36 +61,127 @@
       "image": "data:image/jpeg;base64,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",
       "userId": 1,
       "id": 6
+    },
+    {
+      "title": "Bermuda ",
+      "description": "Em bom estado de uso",
+      "category": "Roupas",
+      "type": "Fazer doacao",
+      "image": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbG9AbWFpbC5jb20iLCJpYXQiOjE2NzMxODgwNjcsImV4cCI6MTY3MzE5MTY2Nywic3ViIjoiMSJ9.023pElPwhJfKIZMjkQGzxVLKWLwUNGV74OcYpry4V2s",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "title": "Microondas",
+      "description": "Funcionando perfeitamente, estou doando por que comprei um novo. ",
+      "category": "Eletro",
+      "type": "Fazer doacao",
+      "image": "https://consertodemicroondasembh.com.br/wp-content/uploads/2020/07/WhatsApp-Image-2020-07-02-at-3.34.40-PM-1-1-1024x576.jpeg",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "title": "Boneco DBZ - vegeta",
+      "description": "Com alguns arranhões",
+      "category": "Brinquedos",
+      "type": "Fazer doacao",
+      "image": "https://imgs.casasbahia.com.br/1533412721/1xg.jpg?imwidth=500",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "title": "Tenis alltasr",
+      "description": "",
+      "category": "Roupas",
+      "type": "Fazer doacao",
+      "image": "",
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "title": "Tenis alltasr",
+      "description": "",
+      "category": "Roupas",
+      "type": "Fazer doacao",
+      "image": "",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "title": "Tenis alltasr",
+      "description": "",
+      "category": "Roupas",
+      "type": "Fazer doacao",
+      "image": "",
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "title": "Tenis alltasr",
+      "description": "",
+      "category": "Roupas",
+      "type": "Fazer doacao",
+      "image": "",
+      "userId": 1,
+      "id": 13
+    },
+    {
+      "title": "Piscina infantil",
+      "description": "Está bem conservada",
+      "category": "Brinquedos",
+      "type": "Fazer doacao",
+      "image": "https://photos.enjoei.com.br/piscina-infantil-500-litros-66288057/828xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy83ODU5NDgvMzdiMTExZDMwYjZkNjFlMGQ3NGI4ZjU1MTg2ZjAwZGMuanBn",
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "title": "Piscina infantil",
+      "description": "Está bem conservada",
+      "category": "Brinquedos",
+      "type": "Fazer doacao",
+      "image": "https://photos.enjoei.com.br/piscina-infantil-500-litros-66288057/828xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy83ODU5NDgvMzdiMTExZDMwYjZkNjFlMGQ3NGI4ZjU1MTg2ZjAwZGMuanBn",
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "title": "Casaco feminino",
+      "description": "Sem detalhes, está perfeito. ",
+      "category": "Roupas",
+      "type": "Fazer doacao",
+      "image": "https://img.olx.com.br/images/16/162266340656010.jpg",
+      "userId": 1,
+      "id": 16
+    },
+    {
+      "title": "Touca unissex verde",
+      "description": "Muito top",
+      "category": "Roupas",
+      "type": "Fazer doacao",
+      "image": "https://img.ltwebstatic.com/images3_pi/2022/10/12/1665556554c40510ffec77edc30e9089c67e1933f2_thumbnail_600x.webp",
+      "userId": 1,
+      "id": 17
+    },
+    {
+      "title": "Meiao azul pára futebol",
+      "description": "Usados pucas vezes",
+      "category": "Roupas",
+      "type": "Fazer doacao",
+      "image": "https://static.shoptimao.com.br/produtos/meiao-nike-classic-football-dri-fit/58/123-4120-058/123-4120-058_zoom1.jpg?ts=1663939779",
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "title": "Sofá",
+      "description": "Com algumas marcas de uso",
+      "category": "Móveis",
+      "type": "donation",
+      "image": "https://cdn.verbolia.com/api/images/H4sIAAAAAAAEAGXOTQrCMBAF4KuUrCXpj9a2OzdFF66quE7TmETTpCRTKYiH8SxezHQjisNs5vH4mDs6Oo0qJAEGXxGieoGtnjCzPW5dOKngnpRF2DjN82WaZMWqjGN8GQRaoJpq3VJ2!UU8UFDs22Ed0cqDMoIYC7UdTYcHMwt7Oql+7LdcCQmoStbxJzupDiSq0ixEGw3cGQr8wKdQQ409v57RjWtpo78J7G5+vAHHgQUie7wBZMh6SegAAAA=/sofa-velho.jpg",
+      "userId": 1,
+      "id": 19
     }
   ],
   "request": [
-    {
-      "title": "Preciso urgente de um PC",
-      "content": "Necessário estar funcionando",
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "title": "Preciso urgente de um PC",
-      "content": "Necessário estar funcionando",
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "title": "Preciso urgente de um PC",
-      "content": "Necessário estar funcionando",
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "title": "Moleton branco",
-      "description": "Preciso urgente",
-      "category": "Roupas",
-      "type": "Solicitar doacao",
-      "image": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbG9AbWFpbC5jb20iLCJpYXQiOjE2NzMxMjE5MTAsImV4cCI6MTY3MzEyNTUxMCwic3ViIjoiMSJ9.TuO5OXQJXJ7hHEFIEahJXNMVG9Zq3_TWZ-N1TnAO1Lo",
-      "userId": 1,
-      "id": 4
-    },
+
     {
       "title": "Moleton ",
       "description": "preciso urgente",
@@ -108,6 +199,69 @@
       "image": "https://photos.enjoei.com.br/moletom-branco-77544328/828xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy8yOTYwMjkxNS9kZjY0OTlkZDA1MDRkMmYzMGNiYTFkYzkyMjdkYjQ0MC5qcGc",
       "userId": 1,
       "id": 6
+    },
+    {
+      "title": "Violão de nylon eletrico",
+      "description": "Falta cordas",
+      "category": "eletronico",
+      "type": "donation",
+      "image": "https://cdn.awsli.com.br/800x800/1569/1569891/produto/60356422/f90f3e7228.jpg",
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "title": "Tenis allstar",
+      "description": "Preciso urgente",
+      "category": "Roupas",
+      "type": "Solicitar doacao",
+      "image": "https://static.riachuelo.com.br/RCHLO/12381837007/portrait/c8a354669dfa8cbeac665ebee40b2218d2ef6592.jpg?imwidth=700",
+      "userId": 1,
+      "id": 13
+    },
+    {
+      "title": "Piscina infantil",
+      "description": "Se alguém poder doar, gratidão. ",
+      "category": "Brinquedos",
+      "type": "Solicitar doacao",
+      "image": "https://photos.enjoei.com.br/piscina-infantil-500-litros-66288057/828xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy83ODU5NDgvMzdiMTExZDMwYjZkNjFlMGQ3NGI4ZjU1MTg2ZjAwZGMuanBn",
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "title": "Toca masculina",
+      "description": "Olá pessoal, alguém pode doar uma toca? De preferência preta.  ",
+      "category": "Roupas",
+      "type": "Solicitar doacao",
+      "image": "https://img.ltwebstatic.com/images3_pi/2021/08/03/1627958247b3c035c8004589a0c15f7f84019574b9_thumbnail_600x.webp",
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "title": "Meião azul",
+      "description": "Galera puder me doar, preciso urgente",
+      "category": "Roupas",
+      "type": "Solicitar doacao",
+      "image": "https://d2r9epyceweg5n.cloudfront.net/stores/779/554/products/img_20180424_192933_73211-63e8a17de1b2848b5d15248365463995-1024-1024.jpg",
+      "userId": 1,
+      "id": 16
+    },
+    {
+      "title": "Meiao azul para futebol",
+      "description": "Preciso urgente",
+      "category": "Roupas",
+      "type": "Solicitar doacao",
+      "image": "https://static.shoptimao.com.br/produtos/meiao-nike-classic-football-dri-fit/58/123-4120-058/123-4120-058_zoom1.jpg?ts=1663939779",
+      "userId": 1,
+      "id": 17
+    },
+    {
+      "title": "Sofá",
+      "description": "Preciso de um sofá, se tiverem para doar?! Grata!",
+      "category": "Móveis",
+      "type": "request",
+      "image": "https://photos.enjoei.com.br/belissimo-e-confortavel-sofa-antigo-para-tres-lugares-com-estrutura-executada-em-madeira-macica-com-almofadas-soltas-e-revestimento-em-autentico-tecido-shantung-de-seda-adamascada/1200xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy81NDAzNTM3LzAxMTE3MjgzOGJlOWJhMGM2YjY4YjZiOTA3ZTEwNDBkLmpwZw",
+      "userId": 1,
+      "id": 18
     }
   ]
 }
