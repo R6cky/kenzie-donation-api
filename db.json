@@ -95,15 +95,6 @@
       "type": "Fazer doacao",
       "image": "https://photos.enjoei.com.br/piscina-infantil-500-litros-66288057/828xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy83ODU5NDgvMzdiMTExZDMwYjZkNjFlMGQ3NGI4ZjU1MTg2ZjAwZGMuanBn",
       "userId": 1,
-      "id": 14
-    },
-    {
-      "title": "Piscina infantil",
-      "description": "Está bem conservada",
-      "category": "Brinquedos",
-      "type": "Fazer doacao",
-      "image": "https://photos.enjoei.com.br/piscina-infantil-500-litros-66288057/828xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy83ODU5NDgvMzdiMTExZDMwYjZkNjFlMGQ3NGI4ZjU1MTg2ZjAwZGMuanBn",
-      "userId": 1,
       "id": 15
     },
     {
@@ -296,24 +287,6 @@
       "image": "https://damyller.vteximg.com.br/arquivos/ids/462500-980-1470/Bermuda-Jeans-Skinny-Masculina-Detalhe-Still--.jpg?v=636922407039170000",
       "userId": 1,
       "id": 23
-    },
-    {
-      "title": "Teste",
-      "description": "Teste",
-      "category": "Roupas",
-      "type": "request",
-      "image": "https://damyller.vteximg.com.br/arquivos/ids/462500-980-1470/Bermuda-Jeans-Skinny-Masculina-Detalhe-Still--.jpg?v=636922407039170000",
-      "userId": 1,
-      "id": 24
-    },
-    {
-      "title": "Teste",
-      "description": "Teste",
-      "category": "Roupas",
-      "type": "request",
-      "image": "https://damyller.vteximg.com.br/arquivos/ids/462500-980-1470/Bermuda-Jeans-Skinny-Masculina-Detalhe-Still--.jpg?v=636922407039170000",
-      "userId": 1,
-      "id": 25
     },
     {
       "title": "Teste",
