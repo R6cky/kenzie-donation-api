@@ -185,7 +185,7 @@ Para adicionar um Post, o usuário precisa estar autenticado;
 
 Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
 
-**Endpoint:** POST https://kenzie-donation-api.onrender.com/posts
+**Endpoint:** POST https://kenzie-donation-api.onrender.com/donation
 
 *exemplo de body*
 ```
@@ -215,7 +215,7 @@ Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFk
 ### Consultar Posts (não precisa de autenticação - todos podem ver) 
 
 Para consultar os post:
-**Endpoint:** GET https://kenzie-donation-api.onrender.com/posts
+**Endpoint:** GET https://kenzie-donation-api.onrender.com/donation
 
 *exemplo de body*
 ```
@@ -245,7 +245,7 @@ Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFk
 
 **__É obrigatório informar o userId no body da requisição__**
 
-**Endpoint:** PATCH https://kenzie-donation-api.onrender.com/posts/{idDoPost}
+**Endpoint:** PATCH https://kenzie-donation-api.onrender.com/donation/{idDoPost}
 
 *exemplo de body*
 ```
@@ -278,7 +278,7 @@ Para deletar um post o usuário precisa estar autenticado;
 
 Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
 
-**Endpoint:** DELETE https://kenzie-donation-api.onrender.com/posts/{idDoPost}
+**Endpoint:** DELETE https://kenzie-donation-api.onrender.com/donation/{idDoPost}
 
 *exemplo de body*
 ```
