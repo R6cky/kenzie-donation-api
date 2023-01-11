@@ -18,6 +18,15 @@
       "phone": "11234567890",
       "state": "Goias",
       "id": 3
+    },
+    {
+      "email": "pedroavfb@gmail.com",
+      "password": "$2a$10$pa5BntL01/ko8NgdDVzMCOgnSbWhIvKQy3mvNZcHw6Te9ZCBAVTKu",
+      "name": "Pedro Braga",
+      "avatar": "",
+      "phone": "11234567890",
+      "state": "Bahia",
+      "id": 4
     }
   ],
   "donation": [
@@ -301,6 +310,26 @@
       "image": "https://cdn.verbolia.com/api/images/H4sIAAAAAAAEAGXPsQ7CIBAG4FchzAZKq62yuTQ6OFnjTIFQlEKl16SJ8d2li9F4ueX+XL7LPfElOsxxBzCMnFLbGxLcTGToSRvTKIweaVGmznK2K7dsu1nnFSO3weAVroVzrZD3X2QEAVZ+O1JRZ0ew3lAfoA6TV2Twi3ASs+2n!qCt6QBzVmWf7GoVdJjnRYr2DnT0AnSj57SGmyggRKQ0aqP1j0mrgJLvHPqrdOS4vHGGqEEmsHi9ARACVBn2AAAA/trator-de-brinquedo-still.jpg",
       "userId": 3,
       "id": 30
+    }
+  ],
+  "getdonation": [
+    {
+      "title": "Computador desktop ",
+      "description": "Funciona perfeitamente",
+      "category": "eletronico",
+      "type": "donation",
+      "image": "https://cdn.desapega.net/pictures/62/b262cb70de426a7fcef4fc9009d84c0fece79595491a3649741ae0e82d219e.jpg",
+      "userId": 4,
+      "id": 1
+    },
+    {
+      "title": "Caminhãozinho de carga",
+      "description": "Em bom estado ",
+      "category": "Brinquedos",
+      "type": "donation",
+      "image": "https://i.ytimg.com/vi/7_BeDVCMEKY/mqdefault.jpg",
+      "userId": 4,
+      "id": 26
     }
   ]
 }
