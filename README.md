@@ -363,3 +363,75 @@ Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFk
 	"id": 3
 }
 ```
+
+## Operações finalizadas
+Para donations, use o endpoint com final "getdonation"; para requests, use o endpoint "getrequest" - body e passagem de token são iguais.
+
+### Pegar doação 
+
+Para adicionar um Post, o usuário precisa estar autenticado;
+
+Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
+
+**Endpoint:** POST https://kenzie-donation-api.onrender.com/getdonation
+
+*exemplo de body*
+```
+{
+	"title": "Computador desktop ",
+     	"description": "Funciona perfeitamente",
+   	"category": "eletronico",
+      	"type": "donation",
+      	"image": "https://cdn.desapega.net/pictures/62/b262cb70de426a7fcef4fc9009d84c0fece79595491a3649741ae0e82d219e.jpg",
+      	"userId": 4,
+      	"id": 1
+}
+```
+*exemplo de resposta* 
+200 - ok
+```
+{
+	"title": "Computador desktop ",
+     	"description": "Funciona perfeitamente",
+   	"category": "eletronico",
+      	"type": "donation",
+      	"image": "https://cdn.desapega.net/pictures/62/b262cb70de426a7fcef4fc9009d84c0fece79595491a3649741ae0e82d219e.jpg",
+      	"userId": 4,
+      	"id": 1
+}
+```
+
+### Ver suas doações aceitas
+
+Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhhbmFkdUBtYWlsLmNvbSIsImlhdCI6MTY3MzAwMjcwMiwiZXhwIjoxNjczMDA2MzAyLCJzdWIiOiIzIn0.iF_gIaDiUbtMihHTZBc6kdduhUz2eP4hKPdI2hMDId4'
+
+**Endpoint:** GET https://kenzie-donation-api.onrender.com/getdonation
+
+*exemplo de body*
+```
+VAZIO
+```
+*exemplo de resposta* 
+200 - OK
+```
+[
+	{
+		"title": "Computador desktop ",
+		"description": "Funciona perfeitamente",
+		"category": "eletronico",
+		"type": "donation",
+		"image": "https://cdn.desapega.net/pictures/62/b262cb70de426a7fcef4fc9009d84c0fece79595491a3649741ae0e82d219e.jpg",
+		"userId": 4,
+		"id": 1
+	},
+	{
+		"title": "Caminhãozinho de carga",
+		"description": "Em bom estado ",
+		"category": "Brinquedos",
+		"type": "donation",
+		"image": "https://i.ytimg.com/vi/7_BeDVCMEKY/mqdefault.jpg",
+		"userId": 4,
+		"id": 26
+	}
+]
+```
